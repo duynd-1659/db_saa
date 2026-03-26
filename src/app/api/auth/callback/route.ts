@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
 
   if (error) {
     console.log('OAuth callback error:', error);
-    return NextResponse.redirect(new URL('/login?error=auth_failed', request.nextUrl.origin));
+    return NextResponse.redirect(new URL('/login?error=auth_failed', 'https://db-saa.vercel.app'));
   }
 
   console.log(
@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
     request.nextUrl.origin,
     request.url,
   );
-  const response = NextResponse.redirect(new URL(safeNext, request.nextUrl.origin));
+  const response = NextResponse.redirect(new URL(safeNext, 'https://db-saa.vercel.app'));
   pendingCookies.forEach(({ name, value, options }) =>
     response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2]),
   );
