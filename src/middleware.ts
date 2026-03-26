@@ -38,7 +38,7 @@ export async function middleware(request: NextRequest) {
 
   // Unauthenticated request to a protected route → redirect to /login
   if (!isPublicPath(pathname) && !user) {
-    const loginUrl = new URL('/login', request.url);
+    const loginUrl = new URL('/login', request.nextUrl.origin);
     return withSessionCookies(NextResponse.redirect(loginUrl));
   }
 
@@ -47,7 +47,7 @@ export async function middleware(request: NextRequest) {
     const locale =
       routing.locales.find((l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`) ??
       routing.defaultLocale;
-    const homeUrl = new URL(`/${locale}`, request.url);
+    const homeUrl = new URL(`/${locale}`, request.nextUrl.origin);
     return withSessionCookies(NextResponse.redirect(homeUrl));
   }
 

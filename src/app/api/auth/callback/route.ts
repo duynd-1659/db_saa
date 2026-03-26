@@ -34,10 +34,10 @@ export async function GET(request: NextRequest) {
   const { error } = await supabase.auth.exchangeCodeForSession(code);
 
   if (error) {
-    return NextResponse.redirect(new URL('/login?error=auth_failed', request.url));
+    return NextResponse.redirect(new URL('/login?error=auth_failed', request.nextUrl.origin));
   }
 
-  const response = NextResponse.redirect(new URL(safeNext, request.url));
+  const response = NextResponse.redirect(new URL(safeNext, request.nextUrl.origin));
   pendingCookies.forEach(({ name, value, options }) =>
     response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2]),
   );
