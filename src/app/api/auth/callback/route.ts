@@ -40,6 +40,11 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(new URL('/login?error=auth_failed', request.nextUrl.origin));
   }
 
+  console.log(
+    'OAuth callback successful, session established.',
+    request.nextUrl.origin,
+    request.url,
+  );
   const response = NextResponse.redirect(new URL(safeNext, request.nextUrl.origin));
   pendingCookies.forEach(({ name, value, options }) =>
     response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2]),

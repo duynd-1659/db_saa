@@ -26,7 +26,8 @@ export function LoginButton({ initialError = null }: LoginButtonProps) {
     const { error, data } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}${process.env.NEXT_PUBLIC_AUTH_REDIRECT_URL ?? '/api/auth/callback'}?next=/${locale}`,
+        // redirectTo: `${window.location.origin}${process.env.NEXT_PUBLIC_AUTH_REDIRECT_URL ?? '/api/auth/callback'}?next=/${locale}`,
+        redirectTo: `https://db-saa.vercel.app/api/auth/callback?next=/${locale}`,
       },
     });
 
