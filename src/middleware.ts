@@ -38,22 +38,18 @@ export async function middleware(request: NextRequest) {
 
   // Unauthenticated request to a protected route → redirect to /login
   if (!isPublicPath(pathname) && !user) {
-    console.log('Unauthenticated access attempt to:', request.url, request.nextUrl.origin);
-    const loginUrl = new URL('/login', request.nextUrl.origin);
+    const loginUrl = new URL('/login', request.nextUrl.clone());
     return withSessionCookies(NextResponse.redirect(loginUrl));
   }
 
   // Already authenticated user visiting /login → redirect to homepage (preserve locale)
   if (isAuthPath(pathname) && user) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = '/';
     const locale =
       routing.locales.find((l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`) ??
       routing.defaultLocale;
-    console.log(
-      'Authenticated user visiting login page, redirecting to home:',
-      request.url,
-      request.nextUrl.origin,
-    );
-    const homeUrl = new URL(`/${locale}`, request.nextUrl.origin);
+    const homeUrl = new URL(`/${locale}`, redirectUrl);
     return withSessionCookies(NextResponse.redirect(homeUrl));
   }
 
@@ -69,6 +65,6 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Skip Next.js internals, static files, and image assets
-    '/((?!_next/static|_next/image|favicon\\.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!_next/static|_next/image|favicon\\.ico|api|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };

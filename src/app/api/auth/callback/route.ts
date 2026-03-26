@@ -33,8 +33,6 @@ export async function GET(request: NextRequest) {
 
   const { error } = await supabase.auth.exchangeCodeForSession(code);
 
-  console.log('OAuth callback received code:', code);
-
   if (error) {
     return NextResponse.redirect(new URL('/login?error=auth_failed', request.url));
   }
