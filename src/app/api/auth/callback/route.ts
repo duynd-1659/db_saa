@@ -36,16 +36,10 @@ export async function GET(request: NextRequest) {
   console.log('OAuth callback received code:', code);
 
   if (error) {
-    console.log('OAuth callback error:', error);
-    return NextResponse.redirect(new URL('/login?error=auth_failed', 'https://db-saa.vercel.app'));
+    return NextResponse.redirect(new URL('/login?error=auth_failed', request.url));
   }
 
-  console.log(
-    'OAuth callback successful, session established.',
-    request.nextUrl.origin,
-    request.url,
-  );
-  const response = NextResponse.redirect(new URL(safeNext, 'https://db-saa.vercel.app'));
+  const response = NextResponse.redirect(new URL(safeNext, request.url));
   pendingCookies.forEach(({ name, value, options }) =>
     response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2]),
   );
