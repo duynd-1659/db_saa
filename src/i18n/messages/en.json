@@ -1,0 +1,225 @@
+{
+  "homepage": {
+    "nav": {
+      "aboutSaa": "About SAA 2025",
+      "awardsInfo": "Awards Information",
+      "sunKudos": "Sun* Kudos"
+    },
+    "hero": {
+      "title": "ROOT FURTHER",
+      "comingSoon": "Coming soon",
+      "countdownDays": "DAYS",
+      "countdownHours": "HOURS",
+      "countdownMinutes": "MINUTES",
+      "eventTime": "Time: 18:30",
+      "eventVenue": "Venue: Military Art Theatre",
+      "ctaAboutAwards": "ABOUT AWARDS",
+      "ctaAboutKudos": "ABOUT KUDOS",
+      "rootFurtherDescription": "SAA 2025 is a journey to honor individuals and teams who have continuously grown, rooted deep, and made a difference. Together, we Root Further — sustainable growth, reaching new heights."
+    },
+    "awards": {
+      "caption": "Sun* annual awards 2025",
+      "title": "Award System",
+      "description": "SAA 2025 honors outstanding individuals and teams across multiple fields, embodying the spirit of Root Further — continuous growth and leaving a lasting impression.",
+      "detailLink": "Details"
+    },
+    "kudos": {
+      "label": "Recognition Movement",
+      "title": "Sun* Kudos",
+      "description": "A platform for recognizing and spreading positive contributions within the organization. Let's build a culture of gratitude and mutual respect at Sun*.",
+      "detailLink": "Details"
+    },
+    "footer": {
+      "copyright": "Copyright Sun* © 2025",
+      "aboutSaa": "About SAA 2025",
+      "awardsInfo": "Awards Information",
+      "sunKudos": "Sun* Kudos",
+      "generalStandards": "General Standards"
+    },
+    "widget": {
+      "ariaLabel": "Write Kudo"
+    },
+    "aria": {
+      "logo": "Sun Annual Awards 2025",
+      "bell": "Notifications",
+      "avatar": "Account",
+      "languageSelector": "Select language"
+    },
+    "qrButton": "Get QR Code"
+  },
+  "login": {
+    "heroTagline": "Begin your journey with SAA 2025.\nLog in to explore!",
+    "loginButton": "LOGIN With Google",
+    "footer": "Copyright Sun* © 2025",
+    "errors": {
+      "auth_failed": "Login failed. Please try again.",
+      "generic": "An error occurred. Please try again."
+    },
+    "aria": {
+      "loginButton": "Login with Google",
+      "logo": "Sun Annual Awards 2025",
+      "keyvisual": ""
+    }
+  },
+  "languageSelector": {
+    "label": "Language",
+    "ariaLabel": "Select language"
+  },
+  "awardsInformation": {
+    "caption": "Sun* Annual Awards 2025",
+    "title": "Award System SAA 2025",
+    "awardCountLabel": "Number of awards:",
+    "awardValueLabel": "Award value:",
+    "perAward": "per award",
+    "perIndividual": "for individual award",
+    "perTeam": "for team award",
+    "or": "Or",
+    "nav": {
+      "ariaLabel": "Award categories"
+    }
+  },
+  "kudosLiveBoard": {
+    "sectionSubtitle": "Sun* Annual Awards 2025",
+    "highlightTitle": "HIGHLIGHT KUDOS",
+    "spotlightTitle": "SPOTLIGHT BOARD",
+    "allKudosTitle": "ALL KUDOS",
+    "writeBarPlaceholder": "Today, who would you like to thank and recognize?",
+    "filterHashtag": "Hashtag",
+    "filterDepartment": "Department",
+    "clearFilters": "Clear filters",
+    "carouselPrev": "Previous",
+    "carouselNext": "Next",
+    "carouselPage": "{current}/{total}",
+    "heartAriaLabel": "Like",
+    "heartAriaLabelActive": "Unlike",
+    "copyLink": "Copy Link",
+    "linkCopied": "Link copied — ready to share!",
+    "loadMore": "Load more",
+    "loading": "Loading...",
+    "emptyFeed": "No kudos yet. Be the first to send one!",
+    "errorFeed": "Could not load kudos. Please try again.",
+    "retry": "Retry",
+    "stats": {
+      "kudosReceived": "Kudos received",
+      "kudosSent": "Kudos sent",
+      "heartsReceived": "Hearts received",
+      "boxesOpened": "Secret Boxes opened",
+      "boxesRemaining": "Secret Boxes remaining"
+    },
+    "openSecretBox": "Open gift",
+    "recentOpeners": "10 LATEST GIFT RECIPIENTS",
+    "spotlightKudosCount": "{count} KUDOS",
+    "spotlightSearch": "Search",
+    "spotlightResultCount": "result(s)",
+    "spotlightZoomIn": "Zoom in",
+    "spotlightZoomOut": "Zoom out",
+    "spotlightFullscreen": "Fullscreen",
+    "spotlightRecentReceived": "received a new Kudos",
+    "anonymous": "Anonymous",
+    "anonymousUser": "Anonymous User",
+    "keyvisualHeading": "Gratitude and recognition system",
+    "aria": {
+      "highlightSection": "Highlight Kudos",
+      "spotlightSection": "Spotlight Board",
+      "feedSection": "All Kudos",
+      "sidebarSection": "Personal statistics",
+      "kudoCard": "Kudo from {sender} to {recipient}"
+    }
+  },
+  "common": {
+    "fab": {
+      "ariaLabel": "Open quick action menu",
+      "expandedRegionLabel": "Quick action menu",
+      "rulesLabel": "Rules",
+      "vietKudosLabel": "Write KUDOS",
+      "huyLabel": "Close quick action menu"
+    },
+    "rules": {
+      "ariaLabel": "SAA 2025 Award Rules",
+      "title": "Rules",
+      "nguoiNhanHeading": "KUDOS RECIPIENTS: HERO BADGES FOR POSITIVE INFLUENCE",
+      "nguoiNhanBody": "Based on the number of teammates who send you Kudos throughout the program, you will be awarded the corresponding Hero Badge.",
+      "nguoiGuiHeading": "KUDOS SENDERS: COLLECT ALL 6 ICONS, WIN A MYSTERY GIFT",
+      "nguoiGuiBody": "Each Kudos you send will be posted with one of 6 special icons. Icons appear randomly and cannot be pre-selected.",
+      "nguoiGuiSummary": "Sunners who collect all 6 icons will receive a special mystery gift from the organizing committee.",
+      "kudosQuocDanHeading": "KUDOS QUỐC DÂN",
+      "kudosQuocDanBody": "The 5 Kudos that receive the most ❤️ across all of Sun* throughout the program will receive a special award.",
+      "heroNew": {
+        "condition": "1–4 people sent you Kudos",
+        "description": "The first step on the journey to becoming a Hero"
+      },
+      "heroRising": {
+        "condition": "5–9 people sent you Kudos",
+        "description": "Your influence is spreading strongly"
+      },
+      "heroSuper": {
+        "condition": "10–20 people sent you Kudos",
+        "description": "You have become an inspiration for the whole team"
+      },
+      "heroLegend": {
+        "condition": "More than 20 people sent you Kudos",
+        "description": "Legend — influence beyond all limits"
+      },
+      "badgeRevival": "REVIVAL",
+      "badgeTouchOfLight": "TOUCH OF LIGHT",
+      "badgeStayGold": "STAY GOLD",
+      "badgeFlowToHorizon": "FLOW TO HORIZON",
+      "badgeBeyondTheBoundary": "BEYOND THE BOUNDARY",
+      "badgeRootFurther": "ROOT FURTHER",
+      "btnClose": "Close award rules panel",
+      "btnCloseLabel": "Close",
+      "btnVietKudos": "Write a KUDOS for your teammate",
+      "btnVietKudosLabel": "Write KUDOS"
+    }
+  },
+  "writeKudo": {
+    "modalTitle": "Send appreciation and recognition to your teammates",
+    "labelRecipient": "Recipient",
+    "labelTitle": "Title",
+    "labelHashtag": "Hashtag",
+    "labelImage": "Image",
+    "searchPlaceholder": "Search colleagues...",
+    "recipientPlaceholder": "Choose a colleague",
+    "searching": "Searching...",
+    "searchMinChars": "Enter at least 2 characters to search",
+    "noHashtagsFound": "No hashtags available",
+    "anonymousNameLabel": "Display name",
+    "contentLabel": "Message",
+    "titlePlaceholder": "Give a title to your teammate",
+    "titleHint": "E.g.: The one who motivates me. The title will be displayed as your Kudos headline.",
+    "contentPlaceholder": "Send your appreciation and recognition to your teammate here!",
+    "contentHint": "You can type '@' + name to mention other colleagues",
+    "maxHashtags": "Max 5",
+    "maxImages": "Max 5",
+    "addHashtag": "Hashtag",
+    "addImage": "Image",
+    "anonymousLabel": "Send appreciation and recognition anonymously",
+    "anonymousNamePlaceholder": "Anonymous display name",
+    "cancelButton": "Cancel",
+    "submitButton": "Send",
+    "communityStandards": "Community standards",
+    "noRecipientFound": "No colleague found",
+    "validation": {
+      "recipientRequired": "Please select a recipient",
+      "contentRequired": "Please enter your message",
+      "hashtagRequired": "Please select at least 1 hashtag",
+      "titleRequired": "Please enter a title",
+      "anonymousNameRequired": "Please enter a display name"
+    },
+    "aria": {
+      "modal": "Write Kudo form",
+      "closeButton": "Close Write Kudo form",
+      "boldButton": "Bold",
+      "italicButton": "Italic",
+      "strikeButton": "Strikethrough",
+      "listButton": "Ordered list",
+      "linkButton": "Insert link",
+      "quoteButton": "Blockquote",
+      "removeImage": "Remove image"
+    }
+  },
+  "locales": {
+    "vi": "VN",
+    "en": "EN"
+  }
+}

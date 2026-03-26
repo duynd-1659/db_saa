@@ -1,0 +1,1558 @@
+{
+  "design_items": [
+    {
+      "id": "2167:9027",
+      "no": "3.5",
+      "type": "GROUP",
+      "name": "3.5_Keyvisual",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Keyvisual",
+          "nameTrans": "Keyvisual - Banner chính",
+          "otherType": "hero",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Banner chính trên trang chủ giới thiệu chủ đề 'ROOT FURTHER' và đồng hồ đếm ngược.\n\nHiển thị:\n  - Tiêu đề lớn: 'ROOT FURTHER' (font rất lớn)\n  - Dòng phụ: 'Coming soon'\n  - Đồng hồ đếm ngược: 3 module hiển thị 'DAYS' / 'HOURS' / 'MINUTES'\n  - Thông tin sự kiện: 'Thời gian: 18h30  Địa điểm: Nhà hát nghệ thuật quân đội'\n  - Nút hành động: 'ABOUT AWARDS' (hover state), 'ABOUT KUDOS' (normal state)\n  - Hình nền: họa tiết dạng rễ/đường nét trang trí\n\nChức năng:\n- Click nút 'ABOUT AWARDS': điều hướng sang trang Awards Information\n- Click nút 'ABOUT KUDOS': điều hướng sang trang Sun* Kudos\n- Đồng hồ: cập nhật thời gian thực cho các module, hiển thị số có 0-padding\n- Trạng thái: nút có hover/active, focus rõ ràng\n- Responsive: các phần co lại hoặc xếp chồng trên màn hình nhỏ để duy trì đọc được"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9035",
+      "no": "B1",
+      "type": "FRAME",
+      "name": "B1_Countdown time",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Countdown time",
+          "nameTrans": "Đếm ngược thời gian",
+          "otherType": "countdown",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Section hiển thị đồng hồ đếm ngược về mốc thời gian sự kiện bắt đầu diễn ra, kèm các thông tin khác về sự kiện. Mốc thời gian sự kiện bắt đầu diễn ra có thể được cấu hình thông qua biến môi trường với giá trị datetime theo format ISO-8601.\n\nHiển thị:\n  - Tiêu đề: 'Coming soon'\n  - Time blocks: 3 nhóm số (Days, Hours, Minutes) - mỗi nhóm 2 chữ số trong ô số\n  - Nhãn đơn vị: 'DAYS', 'HOURS', 'MINUTES'\n\nChức năng:\n- Auto update: Cập nhật thời gian theo thời gian thực (phút)\n- Khi về 0: ẩn subtitle 'Coming soon' và giữ nguyên trạng thái 00"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9036",
+      "no": "B1.2",
+      "type": "TEXT",
+      "name": "B1.2_Coming soon",
+      "specs": {
+        "kind": "label",
+        "item": {
+          "name": "Coming soon",
+          "nameTrans": "Chữ 'Coming soon' (Sắp ra mắt)",
+          "otherType": "",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Thông báo 'Coming soon' hiển thị ngắn dưới tiêu đề.\n\nDisplay:\n- Chỉ hiển thị nhãn, không tương tác\n\nFunction:\n- Khi thời gian trôi qua mốc thời điểm sự kiện bắt đầu thì bị ẩn đi"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9037",
+      "no": "B1.3",
+      "type": "FRAME",
+      "name": "B1.3_Countdown",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Countdown",
+          "nameTrans": "Đồng hồ đếm ngược",
+          "otherType": "countdown",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Đồng hồ đếm ngược hiển thị thời gian còn lại đến thời điểm sự kiện bắt đầu.\n\nHiển thị:\n  - 3 nhóm số: 2 chữ số mỗi nhóm (hộp số dạng số)\n  - Nhãn: 'DAYS', 'HOURS', 'MINUTES' dưới từng nhóm\n\nChức năng:\n- Tự động giảm dần và cập nhật theo thời gian, luôn hiển thị 2 chữ số (thêm '0' nếu cần)\n- Khi về 0: ẩn subtile 'Coming soon' và giữ nguyên trạng thái 00"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9038",
+      "no": "B1.3.1",
+      "type": "FRAME",
+      "name": "B1.3.1_Days",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Ngày",
+          "nameTrans": "Ô hiển thị 'Days' trong bộ đếm",
+          "otherType": "countdown_tile",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Ô hiển thị số ngày còn lại của bộ đếm. Được tính toán dựa trên thời điểm sự kiện bắt đầu.\n\nFunction:\n- Hiển thị: 2 chữ số hiển thị số ngày còn lại và nhãn 'DAYS'\n- Tự cập nhật khi thời gian giảm (theo phút)"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9043",
+      "no": "B1.3.2",
+      "type": "FRAME",
+      "name": "B1.3.2_Hours",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Hours",
+          "nameTrans": "Đơn vị đếm 'HOURS' (giờ)",
+          "otherType": "countdown_unit",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Ô hiển thị số giờ còn lại của bộ đếm. Được tính toán dựa trên thời điểm sự kiện bắt đầu.\n\nFunction:\n- Hiển thị: 2 chữ số hiển thị số giờ còn lại và nhãn 'HOURS'\n- Tự cập nhật khi thời gian giảm (theo phút)"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9048",
+      "no": "B1.3.3",
+      "type": "FRAME",
+      "name": "B1.3.3_Minutes",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Minutes",
+          "nameTrans": "Số phút",
+          "otherType": "countdown_unit",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Ô hiển thị số phút còn lại của bộ đếm. Được tính toán dựa trên thời điểm sự kiện bắt đầu.\n\nFunction:\n- Hiển thị: 2 chữ số hiển thị số phút còn lại và nhãn 'MINUTES'\n- Tự cập nhật khi thời gian giảm (theo phút)"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9053",
+      "no": "B2",
+      "type": "FRAME",
+      "name": "B2_Thông tin sự kiện",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Thông tin sự kiện",
+          "nameTrans": "Thông tin sự kiện (thời gian và địa điểm)",
+          "otherType": "info_block",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Hiển thị thông tin sự kiện: thời gian, địa điểm và ghi chú truyền hình.\n\nDisplay:\n  - Nhãn: 'Thời gian:', 'Địa điểm:' - văn bản phụ\n  - Giá trị: '18h30', 'Nhà hát nghệ thuật quân đội' - văn bản chính\n  - Ghi chú: 'Tường thuật trực tiếp tại Group Facebook Sun* Family' - văn bản hỗ trợ\n\nFunction:\n- Static: Chỉ hiển thị, không interactive\n- Responsive: Trên màn nhỏ các dòng sẽ xuống hàng để không tràn"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9062",
+      "no": "B3",
+      "type": "FRAME",
+      "name": "B3_Call-To-Action",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Call-To-Action",
+          "nameTrans": "Nút kêu gọi hành động (CTA)",
+          "otherType": "",
+          "buttonType": "text_link"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "CTA hai nút: 'ABOUT AWARDS' và 'ABOUT KUDOS'.\n\nDisplay:\n- 'ABOUT AWARDS': nút vàng, hiển thị trạng thái hover\n- 'ABOUT KUDOS': nút viền, hiển thị trạng thái normal\n2 nút có hiển thị thay đổi theo state như nhau\nFunction:\n- Click: navigate đến trang tương ứng"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9063",
+      "no": "B3.1",
+      "type": "INSTANCE",
+      "name": "B3.1_Button-IC About",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-IC About",
+          "nameTrans": "Nút 'ABOUT AWARDS'",
+          "otherType": "",
+          "buttonType": "icon_text"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút chuyển tới trang thông tin giải thưởng 'ABOUT AWARDS'.\n\nFunction:\n- Click: Điều hướng đến trang 'ABOUT AWARDS'\n- State: hover\n- Ở trạng thái normal: hiển thị như item B3.2"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9064",
+      "no": "B3.2",
+      "type": "INSTANCE",
+      "name": "B3.2_Button-IC Kudos",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-IC Kudos",
+          "nameTrans": "Nút 'ABOUT KUDOS'",
+          "otherType": "",
+          "buttonType": "icon_text"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút chuyển tới trang thông tin giải thưởng 'SUN* KUDOS'.\n\nFunction:\n- Click: Điều hướng đến trang 'SUN* KUDOS'\n- State: normal\n- Ở trạng thái hover: hiển thị như item B3.1"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9069",
+      "no": "C1",
+      "type": "FRAME",
+      "name": "C1_Header Giải thưởng",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Header Giải thưởng",
+          "nameTrans": "Tiêu đề mục Giải thưởng",
+          "otherType": "info_block",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Tiêu đề section giới thiệu hệ thống giải thưởng.\n\nDisplay:\n  - 'Sun* annual awards 2025': caption nhỏ\n  - 'Hệ thống giải thưởng': tiêu đề lớn\n  - 'Các hạng mục sẽ được trao giải theo\nTOP những người xuất sắc nhất.': mô tả phụ\n\nFunction:\n- Static: chỉ hiển thị thông tin, không tương tác"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9075",
+      "no": "C2.1",
+      "type": "INSTANCE",
+      "name": "C2.1_Top Talent Award",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Thẻ giải 'Top Talent'",
+          "nameTrans": "Thẻ giải thưởng 'Top Talent' - vinh danh cá nhân xuất sắc",
+          "otherType": "card",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Thẻ hiển thị thông tin hạng mục giải thưởng \"Top Talent\".\n\nHiển thị:\n  - Hình thu nhỏ: Graphic vuông (phần trên của thẻ)\n  - Tiêu đề: 'Top Talent'\n  - Mô tả: 'Vinh danh top cá nhân xuất sắc trên mọi phương diện'\n  - Link: 'Chi tiết'\n\nChức năng:\n- Click hình hoặc tiêu đề hoặc 'Chi tiết': mở trang 'Awards Information' kèm hashtag là slug của hạng mục để trình duyệt tự động cuộn tới đúng vị trí chứa thông tin chi tiết về giải thưởng\n- Hover: nâng nhẹ và viền/ánh sáng nổi bật\n"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9076",
+      "no": "C2.2",
+      "type": "INSTANCE",
+      "name": "C2.2_Top Project Award",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Top Project Award",
+          "nameTrans": "Giải thưởng Top Project",
+          "otherType": "card",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Thẻ hiển thị thông tin hạng mục 'Top Project'.\n\nHiển thị:\n  - Hình thu nhỏ: Graphic vuông (phần trên của thẻ)\n  - Tiêu đề: 'Top Project'\n  - Mô tả:\n  - Link: 'Chi tiết'\n\nChức năng:\n- Click hình hoặc tiêu đề hoặc 'Chi tiết': mở trang chi tiết hạng mục tại tab 'Awards Information'\n- Hover: nâng nhẹ và viền/ánh sáng nổi bật\n"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9077",
+      "no": "C2.3",
+      "type": "INSTANCE",
+      "name": "C2.3_Top Project Leader Award",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Top Project Leader Award",
+          "nameTrans": "Top Project Leader - Lãnh đạo dự án",
+          "otherType": "card",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Thẻ hiển thị thông tin hạng mục 'Top Project Leader'.\n\nHiển thị:\n  - Hình thu nhỏ: Graphic vuông (phần trên của thẻ)\n  - Tiêu đề: 'Top Project Leader'\n  - Mô tả:\n  - Link: 'Chi tiết'\n\nChức năng:\n- Click hình hoặc tiêu đề hoặc 'Chi tiết': mở trang chi tiết hạng mục tại tab 'Awards Information'\n- Hover: nâng nhẹ và viền/ánh sáng nổi bật\n"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9079",
+      "no": "C2.4",
+      "type": "INSTANCE",
+      "name": "C2.4_Best Manager Award",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Giải Best Manager",
+          "nameTrans": "Best Manager Award",
+          "otherType": "card",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Thẻ hiển thị thông tin hạng mục 'Best Manager'.\n\nHiển thị:\n  - Hình thu nhỏ: Graphic vuông (phần trên của thẻ)\n  - Tiêu đề: 'Best Manager'\n  - Mô tả:\n  - Link: 'Chi tiết'\n\nChức năng:\n- Click hình hoặc tiêu đề hoặc 'Chi tiết': mở trang chi tiết hạng mục tại tab 'Awards Information'\n- Hover: nâng nhẹ và viền/ánh sáng nổi bật\n"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9080",
+      "no": "C2.5",
+      "type": "INSTANCE",
+      "name": "C2.5_Signature 2025 - Creator Award",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Signature 2025 - Creator Award",
+          "nameTrans": "Giải Signature 2025 - Creator",
+          "otherType": "card",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Thẻ hiển thị thông tin hạng mục 'Signature 2025 - Creator'.\n\nHiển thị:\n  - Hình thu nhỏ: Graphic vuông (phần trên của thẻ)\n  - Tiêu đề: 'Signature 2025 - Creator'\n  - Mô tả:\n  - Link: 'Chi tiết'\n\nChức năng:\n- Click hình hoặc tiêu đề hoặc 'Chi tiết': mở trang chi tiết hạng mục tại tab 'Awards Information'\n- Hover: nâng nhẹ và viền/ánh sáng nổi bật\n"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9081",
+      "no": "C2.6",
+      "type": "INSTANCE",
+      "name": "C2.6_MVP Award",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "MVP Award",
+          "nameTrans": "Giải MVP (Most Valuable Person)",
+          "otherType": "card",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Thẻ hiển thị thông tin hạng mục 'MVP (Most Valuable Person)'.\n\nHiển thị:\n  - Hình thu nhỏ: Graphic vuông (phần trên của thẻ)\n  - Tiêu đề: 'MVP (Most Valuable Person)'\n  - Mô tả:\n  - Link: 'Chi tiết'\n\nChức năng:\n- Click hình hoặc tiêu đề hoặc 'Chi tiết': mở trang chi tiết hạng mục tại tab 'Awards Information'\n- Hover: nâng nhẹ và viền/ánh sáng nổi bật\n"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "2167:9091",
+      "no": "A1",
+      "type": "INSTANCE",
+      "name": "A1_Header",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Header",
+          "nameTrans": "Thanh Header (Điều hướng chính)",
+          "otherType": "navigation",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": true,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Header điều hướng chính gồm logo, các link và icon chức năng.\n\nHiển thị:\n  - Logo: biểu tượng (trái)\n  - Links: 'About SAA 2025', 'Awards Information', 'Sun* Kudos'\n - Controls: bell (thông báo), 'VI' (chuyển ngôn ngữ) và biểu tượng người dùng ở bên phải\n\nChức năng:\n- Click logo: về trang chủ\n- Click link: chuyển trang/section tương ứng; active: đổi màu + underline\n- Hover link: highlight\n- Click 'VN'/bell/avatar: mở menu tương ứng"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "3390:10349",
+      "no": "D1",
+      "type": "INSTANCE",
+      "name": "D1_Sunkudos",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Sunkudos",
+          "nameTrans": "Sun* Kudos - Phong trào ghi nhận",
+          "otherType": "card",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Khối quảng bá 'Sun* Kudos' với tiêu đề, mô tả ngắn và nút hành động.\nDisplay:\n  - Label: 'Phong trào ghi nhận'\n  - Title: 'Sun* Kudos'\n  - Description: đoạn mô tả tóm tắt\n  - Button: 'Chi tiết' (icon)\nFunction:\n- Click 'Chi tiết': mở trang chi tiết Sun* Kudos"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "5001:14800",
+      "no": "7",
+      "type": "INSTANCE",
+      "name": "7_Footer",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Footer",
+          "nameTrans": "Chân trang (Footer)",
+          "otherType": "navigation",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Thanh footer chứa logo, liên kết điều hướng và thông tin bản quyền ở cuối trang.\n\nDisplay:\n  - Logo: biểu tượng SAA (trái)\n  - Liên kết: 'About SAA 2025', 'Awards Information', 'Sun* Kudos' (giữa)\n  - Bản quyền: 'Bản quyền thuộc vè Sun* © 2025' (phải)\n\nFunction:\n- Click link: điều hướng tới trang tương ứng\n- Click logo: về đầu trang chủ\n- Hover/active/normal state: tương tự các item ở header"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "5001:14827",
+      "no": "B4",
+      "type": "GROUP",
+      "name": "B4_content",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "content",
+          "nameTrans": "Đoạn mô tả 'Root Further'",
+          "otherType": "info_block",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Đoạn mô tả 'Root Further' giải thích tinh thần chương trình ngay dưới phần hero.\n\nHiển thị:\n  - Paragraph: Văn bản mô tả (một khối, nhiều dòng)\n  - Style: Màu sáng trên nền tối, font kích thước trung bình\n\nChức năng:\n- Hiển thị tĩnh: Không có tương tác\n- Responsive: Tự xuống dòng và co lại trên màn hình nhỏ"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "5005:14974",
+      "no": "C2",
+      "type": "GROUP",
+      "name": "C2_Award list",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Award list",
+          "nameTrans": "Danh sách giải thưởng",
+          "otherType": "card",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Danh sách các hạng mục giải thưởng hiển thị dạng lưới thẻ trên trang chủ.\n\nHiển thị:\n  - Hình thẻ: ảnh vuông/hiệu ứng vòng sáng\n  - Tiêu đề: 'Top Talent', 'Top Project', ...\n  - Mô tả ngắn: 1-2 dòng\n  - Link: 'Chi tiết' (kèm icon)\n  - Hiển thị của các hạng mục sẽ tương tự nhau, chỉ khác nội dung\n\nChức năng:\n- Click vào hình ảnh, tiêu đề hoặc 'Chi tiết': mở trang 'Awards Information' kèm hashtag là slug của hạng mục để trình duyệt tự động cuộn tới đúng vị trí chứa thông tin chi tiết về giải thưởng\n- Hover: nâng nhẹ và viền/ánh sáng nổi bật\n- Responsive: Mobile và Tablet: Grid 2 cột; Desktop: grid 3 cột"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "5022:15169",
+      "no": "6",
+      "type": "INSTANCE",
+      "name": "6_Widget Button",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Widget Button",
+          "nameTrans": "Nút Widget (hành động nhanh)",
+          "otherType": "",
+          "buttonType": "icon_text"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút hành động nhanh nổi và cố định ở mép phải bên dưới màn hình để mở chức năng phụ.\nDisplay:\n  - Pill 105x64px: nền vàng, bo tròn\n  - Icon trái: biểu tượng bút chì\n  - Icon phải: biểu tượng của SAA\n  - Ký tự: '/' (phân cách giữa biểu tượng)\nFunction:\n- Click: Mở menu các option hành động nhanh"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9075;214:1019",
+      "no": "C2.1.1",
+      "type": "INSTANCE",
+      "name": "C2.1.1_Picture-Award",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Picture-Award",
+          "nameTrans": "Hình Ảnh Giải Thưởng",
+          "otherType": "card",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Ảnh thumbnail cho hạng mục giải thưởng \"Top Talent\" trong lưới danh sách.\n\nDisplay:\n  - Hình ảnh: Hình vuông bo góc, có viền mảnh màu vàng và hiệu ứng ánh sáng\n  - Phần phụ: Tiêu đề và mô tả hiển thị bên dưới ảnh (không nằm trong vùng ảnh này)\n\nFunction:\n- Click: mở trang 'Awards Information' kèm hashtag là slug của hạng mục để trình duyệt tự động cuộn tới đúng vị trí chứa thông tin chi tiết về giải thưởng\n- Hover: nâng nhẹ và viền/ánh sáng nổi bật\n- State: Không có trạng thái input; ảnh luôn enabled"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9075;214:1021",
+      "no": "C2.1.2",
+      "type": "TEXT",
+      "name": "C2.1.2_Top Talent",
+      "specs": {
+        "kind": "label",
+        "item": {
+          "name": "Top Talent",
+          "nameTrans": "Top Talent (Giải Tài Năng)",
+          "otherType": "",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Hiển thị tên hạng mục giải thưởng \"Top Talent\".\n\nFunction:\n- Click: mở trang 'Awards Information' kèm hashtag là tên hạng mục để trình duyệt tự động cuộn tới đúng vị trí chứa thông tin chi tiết về giải thưởng"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9075;214:1022",
+      "no": "C2.1.3",
+      "type": "TEXT",
+      "name": "C2.1.3_Vinh danh top cá nhân xuất sắc trên mọi phương diện",
+      "specs": {
+        "kind": "label",
+        "item": {
+          "name": "Vinh danh top cá nhân xuất sắc trên mọi phương diện",
+          "nameTrans": "Mô tả Top Talent",
+          "otherType": "",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Dòng mô tả ngắn về hạng mục, dùng để giải thích mục đích giải thưởng.\n\nFunction:\n- Display: Hiển thị mô tả ngắn về hạng mục giải thưởng, không tương tác\n- Hiển thị tối đa 2 dòng, nếu quá dài hiển thị dấu ba chấm (...) ở cuối câu."
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9075;214:1023",
+      "no": "C2.1.4",
+      "type": "INSTANCE",
+      "name": "C2.1.4_Button-IC",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-IC",
+          "nameTrans": "Nút 'Chi tiết'",
+          "otherType": "",
+          "buttonType": "icon_text"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút 'Chi tiết' đặt link để mở trang thông tin chi tiết mục.\n\nFunction:\n- Click: mở trang 'Awards Information' kèm hashtag là slug của hạng mục để trình duyệt tự động cuộn tới đúng vị trí chứa thông tin chi tiết về giải thưởng"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9091;178:1033",
+      "no": "A1.1",
+      "type": "INSTANCE",
+      "name": "A1.1_LOGO",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "LOGO",
+          "nameTrans": "Logo trang chủ",
+          "otherType": "",
+          "buttonType": "icon_text"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Logo trang chủ hiển thị thương hiệu Sun* SAA.\n\nFunction:\n- Click: về trang chủ (đầu trang About SAA 2025)\n- Kích thước: 64x60px, có alt text"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9091;186:1579",
+      "no": "A1.2",
+      "type": "INSTANCE",
+      "name": "A1.2_Button-Selected state",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-Selected state",
+          "nameTrans": "Nút 'About SAA 2025' (đang chọn)",
+          "otherType": "",
+          "buttonType": "text_link"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút menu đang chọn: 'About SAA 2025'.\nLiên kết điều hướng header đến trang 'About SAA 2025'.\n\nFunction:\n- Click: điều hướng đến trang 'About SAA 2025'\n- State: selected hiển thị text nổi bật (màu vàng/underline). Nếu đang selected, click vào button thì scroll lên đầu trang\n- Trường hợp hover: highlight như item A1.2\n- Trường hợp không chọn, không hover: hiển thị text thông thường như A1.3"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9091;186:1587",
+      "no": "A1.3",
+      "type": "INSTANCE",
+      "name": "A1.3_Button Hover State",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button Hover State",
+          "nameTrans": "Nút 'Awards Information' - trạng thái hover",
+          "otherType": "",
+          "buttonType": "text_link"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút menu đang hover: 'Awards Information'.\nLiên kết điều hướng header đến trang 'Awards Information'.\n\nFunction:\n- Click: điều hướng đến trang 'Awards Information'\n- State: hover hiển thị nền sáng, highlight\n- Trường hợp selected: hiển thị text nổi bật (màu vàng/underline) như A1.1. Nếu đang selected, click vào button thì scroll lên đầu trang\n- Trường hợp không chọn, không hover: hiển thị text thông thường như A1.3"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9091;186:1593",
+      "no": "A1.5",
+      "type": "INSTANCE",
+      "name": "A1.5_Button-Normal state",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-Normal state",
+          "nameTrans": "Nút 'Sun* Kudos'",
+          "otherType": "",
+          "buttonType": "text_link"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút menu đang hover: 'Sun* Kudos'.\nLiên kết điều hướng header đến trang 'Sun* Kudos'.\n\nFunction:\n- Click: điều hướng đến trang 'Sun* Kudos'\n- State: không chọn, hiển thị text thông thường\n- Trường hợp selected: hiển thị text nổi bật (màu vàng/underline) như A1.1. Nếu đang selected, click vào button thì scroll lên đầu trang\n- Trường hợp hover: highlight như item A1.2"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9091;186:1597",
+      "no": "A1.8",
+      "type": "INSTANCE",
+      "name": "A1.8_Button-IC",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-IC",
+          "nameTrans": "Nút biểu tượng tài khoản",
+          "otherType": "",
+          "buttonType": "icon_text"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "on_click",
+          "linkedFrameId": "721:5223",
+          "linkedFrameName": "Dropdown-profile"
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": ""
+        },
+        "description": "Nút biểu tượng 40x40px góc trên phải để mở menu tài khoản.\n\nFunction:\n- Click: Mở menu tài khoản\n- Option: Profile/Sign out/Admin Dashboard (đối với role admin)"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9091;186:1696",
+      "no": "A1.7",
+      "type": "INSTANCE",
+      "name": "A1.7_Language",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Language",
+          "nameTrans": "Ngôn ngữ",
+          "otherType": "",
+          "buttonType": "icon_text"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút chọn ngôn ngữ hiển thị ngôn ngữ hiện tại 'VN'.\n\nFunction:\n- Click: Mở menu chọn ngôn ngữ và đổi giao diện sang ngôn ngữ được chọn.\n- Option: VN/EN"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I2167:9091;186:2101",
+      "no": "A1.6",
+      "type": "INSTANCE",
+      "name": "A1.6_Notification",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Notification",
+          "nameTrans": "Nút Thông báo",
+          "otherType": "",
+          "buttonType": "icon_text"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút icon 'Notification' 40x40px mở panel thông báo.\nClick: mở panel thông báo.\nHiển thị: icon chuông, badge đỏ khi có thông báo chưa đọc; \nState: enabled/disabled."
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I3390:10349;313:8419",
+      "no": "D2",
+      "type": "FRAME",
+      "name": "D2_Content",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "Content",
+          "nameTrans": "Khối nội dung 'Sun* Kudos'",
+          "otherType": "info_block",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Khối thông tin quảng bá 'Sun* Kudos' kèm ảnh và nút CTA trên trang chính.\n\nHiển thị:\n  - Tiêu đề: 'Sun* Kudos' - văn bản lớn\n  - Dòng mô tả nhỏ: 'Phong trào ghi nhận'\n  - Nội dung: đoạn mô tả ngắn về chiến dịch\n  - Hình ảnh: nền/ảnh minh họa bên phải\n  - Nút: 'Chi tiết' (button)\n\nChức năng:\n- Click 'Chi tiết': dẫn đến trang chi tiết tab 'Sun* Kudos'"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I3390:10349;313:8426",
+      "no": "D2.1",
+      "type": "INSTANCE",
+      "name": "D2.1_Button-IC",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-IC",
+          "nameTrans": "Nút 'Chi tiết'",
+          "otherType": "",
+          "buttonType": "icon_text"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút 'Chi tiết' mở thông tin chi tiết của tab 'Sun* Kudos'\n\nFunction:\n- Click: Mở tab 'Sun* Kudos'"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I5001:14800;1161:9487",
+      "no": "7.5",
+      "type": "INSTANCE",
+      "name": "7.5_Button-IC",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-IC",
+          "nameTrans": "Nút Tiêu chuẩn chung",
+          "otherType": "",
+          "buttonType": "text_link"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút điều hướng tới 'Tiêu chuẩn chung' trong banner."
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I5001:14800;342:1408",
+      "no": "7.1",
+      "type": "INSTANCE",
+      "name": "7.1_LOGO",
+      "specs": {
+        "kind": "others",
+        "item": {
+          "name": "LOGO",
+          "nameTrans": "Logo Sun* Annual Awards",
+          "otherType": "logo",
+          "buttonType": ""
+        },
+        "database": {
+          "note": "",
+          "tableName": null,
+          "columnName": null
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": null,
+          "dataType": null,
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Logo Sun* hiển thị thương hiệu (69x64px).\n\nFunction:\nTương tự item A1.1"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I5001:14800;342:1410",
+      "no": "7.2",
+      "type": "INSTANCE",
+      "name": "7.2_Button-IC",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-IC",
+          "nameTrans": "Nút 'About SAA 2025'",
+          "otherType": "",
+          "buttonType": "text_link"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút 'About SAA 2025' trong footer để mở trang giới thiệu.\n\nFunction:\nTương tự item A1.2"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I5001:14800;342:1411",
+      "no": "7.3",
+      "type": "INSTANCE",
+      "name": "7.3_Button-IC",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-IC",
+          "nameTrans": "Nút 'Awards Information'",
+          "otherType": "",
+          "buttonType": "text_link"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút nav 'Awards Information' dẫn đến trang thông tin giải thưởng.\n\nFunction:\nTương tự item A1.3"
+      },
+      "status": "completed"
+    },
+    {
+      "id": "I5001:14800;342:1412",
+      "no": "7.4",
+      "type": "INSTANCE",
+      "name": "7.4_Button-IC",
+      "specs": {
+        "kind": "button",
+        "item": {
+          "name": "Button-IC",
+          "nameTrans": "Nút Sun* Kudos",
+          "otherType": "",
+          "buttonType": "text_link"
+        },
+        "database": {
+          "note": "",
+          "tableName": "",
+          "columnName": ""
+        },
+        "navigation": {
+          "note": "",
+          "action": "",
+          "linkedFrameId": "",
+          "linkedFrameName": ""
+        },
+        "validation": {
+          "note": "",
+          "format": "",
+          "dataType": "",
+          "required": false,
+          "maxLength": null,
+          "minLength": null,
+          "defaultValue": null
+        },
+        "description": "Nút điều hướng tới 'Sun* Kudos' trong banner.\n\nFunction:\nTương tự item A1.5"
+      },
+      "status": "completed"
+    }
+  ]
+}

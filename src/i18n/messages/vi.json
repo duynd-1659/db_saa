@@ -1,0 +1,225 @@
+{
+  "homepage": {
+    "nav": {
+      "aboutSaa": "About SAA 2025",
+      "awardsInfo": "Awards Information",
+      "sunKudos": "Sun* Kudos"
+    },
+    "hero": {
+      "title": "ROOT FURTHER",
+      "comingSoon": "Coming soon",
+      "countdownDays": "DAYS",
+      "countdownHours": "HOURS",
+      "countdownMinutes": "MINUTES",
+      "eventTime": "Thời gian: 18h30",
+      "eventVenue": "Địa điểm: Nhà hát nghệ thuật quân đội",
+      "ctaAboutAwards": "ABOUT AWARDS",
+      "ctaAboutKudos": "ABOUT KUDOS",
+      "rootFurtherDescription": "SAA 2025 là hành trình tôn vinh những cá nhân và tập thể đã không ngừng vươn xa, bám rễ sâu và tạo nên sự khác biệt. Cùng nhau, chúng ta Root Further — phát triển bền vững, vươn tới tầm cao mới."
+    },
+    "awards": {
+      "caption": "Sun* annual awards 2025",
+      "title": "Hệ thống giải thưởng",
+      "description": "SAA 2025 vinh danh các cá nhân và tập thể xuất sắc trên nhiều lĩnh vực, thể hiện tinh thần Root Further — không ngừng phát triển và tạo dấu ấn.",
+      "detailLink": "Chi tiết"
+    },
+    "kudos": {
+      "label": "Phong trào ghi nhận",
+      "title": "Sun* Kudos",
+      "description": "ĐIỂM MỚI CỦA SAA 2025\nHoạt động ghi nhận và cảm ơn đồng nghiệp - lần đầu tiên được diễn ra dành cho tất cả Sunner. Hoạt động sẽ được triển khai vào tháng 11/2025, khuyến khích người Sun* chia sẻ những lời ghi nhận, cảm ơn đồng nghiệp trên hệ thống do BTC công bố. Đây sẽ là chất liệu để Hội đồng Heads tham khảo trong quá trình lựa chọn người đạt giải.",
+      "detailLink": "Chi tiết"
+    },
+    "footer": {
+      "copyright": "Bản quyền thuộc về Sun* © 2025",
+      "aboutSaa": "About SAA 2025",
+      "awardsInfo": "Awards Information",
+      "sunKudos": "Sun* Kudos",
+      "generalStandards": "Tiêu chuẩn chung"
+    },
+    "widget": {
+      "ariaLabel": "Viết Kudo"
+    },
+    "aria": {
+      "logo": "Sun Annual Awards 2025",
+      "bell": "Thông báo",
+      "avatar": "Tài khoản",
+      "languageSelector": "Chọn ngôn ngữ"
+    },
+    "qrButton": "Lấy mã QR"
+  },
+  "login": {
+    "heroTagline": "Bắt đầu hành trình của bạn cùng SAA 2025.\nĐăng nhập để khám phá!",
+    "loginButton": "LOGIN With Google",
+    "footer": "Bản quyền thuộc về Sun* © 2025",
+    "errors": {
+      "auth_failed": "Đăng nhập thất bại. Vui lòng thử lại.",
+      "generic": "Đã xảy ra lỗi. Vui lòng thử lại."
+    },
+    "aria": {
+      "loginButton": "Đăng nhập bằng Google",
+      "logo": "Sun Annual Awards 2025",
+      "keyvisual": ""
+    }
+  },
+  "languageSelector": {
+    "label": "Ngôn ngữ",
+    "ariaLabel": "Chọn ngôn ngữ"
+  },
+  "awardsInformation": {
+    "caption": "Sun* Annual Awards 2025",
+    "title": "Hệ thống giải thưởng SAA 2025",
+    "awardCountLabel": "Số lượng giải thưởng:",
+    "awardValueLabel": "Giá trị giải thưởng:",
+    "perAward": "cho mỗi giải thưởng",
+    "perIndividual": "cho giải cá nhân",
+    "perTeam": "cho giải tập thể",
+    "or": "Hoặc",
+    "nav": {
+      "ariaLabel": "Danh mục giải thưởng"
+    }
+  },
+  "kudosLiveBoard": {
+    "sectionSubtitle": "Sun* Annual Awards 2025",
+    "highlightTitle": "HIGHLIGHT KUDOS",
+    "spotlightTitle": "SPOTLIGHT BOARD",
+    "allKudosTitle": "ALL KUDOS",
+    "writeBarPlaceholder": "Hôm nay, bạn muốn gửi lời cảm ơn và ghi nhận đến ai?",
+    "filterHashtag": "Hashtag",
+    "filterDepartment": "Phòng ban",
+    "clearFilters": "Xoá bộ lọc",
+    "carouselPrev": "Trang trước",
+    "carouselNext": "Trang tiếp",
+    "carouselPage": "{current}/{total}",
+    "heartAriaLabel": "Thả tim",
+    "heartAriaLabelActive": "Bỏ thả tim",
+    "copyLink": "Sao chép liên kết",
+    "linkCopied": "Đã sao chép liên kết — sẵn sàng chia sẻ!",
+    "loadMore": "Xem thêm",
+    "loading": "Đang tải...",
+    "emptyFeed": "Chưa có Kudo nào. Hãy là người đầu tiên gửi lời cảm ơn!",
+    "errorFeed": "Không thể tải danh sách Kudo. Vui lòng thử lại.",
+    "retry": "Thử lại",
+    "stats": {
+      "kudosReceived": "Kudos nhận",
+      "kudosSent": "Kudos gửi",
+      "heartsReceived": "Tim nhận",
+      "boxesOpened": "Secret Box đã mở",
+      "boxesRemaining": "Secret Box chưa mở"
+    },
+    "openSecretBox": "Mở quà",
+    "recentOpeners": "10 SUNNER NHẬN QUÀ MỚI NHẤT",
+    "spotlightKudosCount": "{count} KUDOS",
+    "spotlightSearch": "Tìm kiếm",
+    "spotlightResultCount": "kết quả",
+    "spotlightZoomIn": "Phóng to",
+    "spotlightZoomOut": "Thu nhỏ",
+    "spotlightFullscreen": "Toàn màn hình",
+    "spotlightRecentReceived": "đã nhận được một Kudos mới",
+    "anonymous": "Ẩn danh",
+    "anonymousUser": "Người dùng ẩn danh",
+    "keyvisualHeading": "Hệ thống ghi nhận và cảm ơn",
+    "aria": {
+      "highlightSection": "Kudos nổi bật",
+      "spotlightSection": "Bảng Spotlight",
+      "feedSection": "Tất cả Kudos",
+      "sidebarSection": "Thống kê cá nhân",
+      "kudoCard": "Kudo từ {sender} gửi đến {recipient}"
+    }
+  },
+  "common": {
+    "fab": {
+      "ariaLabel": "Mở menu hành động nhanh",
+      "expandedRegionLabel": "Menu hành động nhanh",
+      "rulesLabel": "Thể lệ",
+      "vietKudosLabel": "Viết KUDOS",
+      "huyLabel": "Đóng menu hành động nhanh"
+    },
+    "rules": {
+      "ariaLabel": "Thể lệ SAA 2025",
+      "title": "Thể lệ",
+      "nguoiNhanHeading": "NGƯỜI NHẬN KUDOS: HUY HIỆU HERO CHO NHỮNG ẢNH HƯỞNG TÍCH CỰC",
+      "nguoiNhanBody": "Dựa trên số lượng đồng đội gửi trao Kudos cho bạn trong suốt chương trình, bạn sẽ được trao tặng Huy hiệu Hero tương ứng.",
+      "nguoiGuiHeading": "NGƯỜI GỬI KUDOS: SƯU TẬP TRỌN BỘ 6 ICON, NHẬN NGAY PHẦN QUÀ BÍ ẨN",
+      "nguoiGuiBody": "Mỗi lời Kudos bạn gửi sẽ được đăng tải kèm theo một trong 6 icon đặc biệt. Icon xuất hiện ngẫu nhiên và không thể chọn trước.",
+      "nguoiGuiSummary": "Những Sunner thu thập trọn bộ 6 icon sẽ nhận được một phần quà bí ẩn đặc biệt từ ban tổ chức.",
+      "kudosQuocDanHeading": "KUDOS QUỐC DÂN",
+      "kudosQuocDanBody": "5 Kudos nhận về nhiều ❤️ nhất toàn Sun* trong suốt chương trình sẽ được trao giải thưởng đặc biệt.",
+      "heroNew": {
+        "condition": "Có 1-4 người gửi Kudos cho bạn",
+        "description": "Bước đầu tiên trên hành trình trở thành Hero"
+      },
+      "heroRising": {
+        "condition": "Có 5-9 người gửi Kudos cho bạn",
+        "description": "Ảnh hưởng của bạn đang lan tỏa mạnh mẽ"
+      },
+      "heroSuper": {
+        "condition": "Có 10-20 người gửi Kudos cho bạn",
+        "description": "Bạn đã trở thành nguồn cảm hứng cho cả đội"
+      },
+      "heroLegend": {
+        "condition": "Có hơn 20 người gửi Kudos cho bạn",
+        "description": "Huyền thoại — ảnh hưởng vượt qua mọi giới hạn"
+      },
+      "badgeRevival": "REVIVAL",
+      "badgeTouchOfLight": "TOUCH OF LIGHT",
+      "badgeStayGold": "STAY GOLD",
+      "badgeFlowToHorizon": "FLOW TO HORIZON",
+      "badgeBeyondTheBoundary": "BEYOND THE BOUNDARY",
+      "badgeRootFurther": "ROOT FURTHER",
+      "btnClose": "Đóng bảng thể lệ",
+      "btnCloseLabel": "Đóng",
+      "btnVietKudos": "Viết KUDOS tặng đồng đội",
+      "btnVietKudosLabel": "Viết KUDOS"
+    }
+  },
+  "writeKudo": {
+    "modalTitle": "Gửi lời cám ơn và ghi nhận đến đồng đội",
+    "labelRecipient": "Người nhận",
+    "labelTitle": "Danh hiệu",
+    "labelHashtag": "Hashtag",
+    "labelImage": "Image",
+    "searchPlaceholder": "Tìm kiếm đồng nghiệp...",
+    "recipientPlaceholder": "Chọn đồng nghiệp",
+    "searching": "Đang tìm...",
+    "searchMinChars": "Nhập ít nhất 2 ký tự để tìm kiếm",
+    "noHashtagsFound": "Không có hashtag nào",
+    "anonymousNameLabel": "Tên hiển thị",
+    "contentLabel": "Nội dung",
+    "titlePlaceholder": "Dành tặng một danh hiệu cho đồng đội",
+    "titleHint": "Ví dụ: Người truyền động lực cho tôi. Danh hiệu sẽ hiển thị làm tiêu đề Kudos của bạn.",
+    "contentPlaceholder": "Hãy gửi gắm lời cám ơn và ghi nhận đến đồng đội tại đây nhé!",
+    "contentHint": "Bạn có thể '@' + tên để nhắc tới đồng nghiệp khác",
+    "maxHashtags": "Tối đa 5",
+    "maxImages": "Tối đa 5",
+    "addHashtag": "Hashtag",
+    "addImage": "Image",
+    "anonymousLabel": "Gửi lời cám ơn và ghi nhận ẩn danh",
+    "anonymousNamePlaceholder": "Tên hiển thị ẩn danh",
+    "cancelButton": "Hủy",
+    "submitButton": "Gửi",
+    "communityStandards": "Tiêu chuẩn cộng đồng",
+    "noRecipientFound": "Không tìm thấy đồng nghiệp",
+    "validation": {
+      "recipientRequired": "Vui lòng chọn người nhận",
+      "contentRequired": "Vui lòng nhập nội dung",
+      "hashtagRequired": "Vui lòng chọn ít nhất 1 hashtag",
+      "titleRequired": "Vui lòng nhập danh hiệu",
+      "anonymousNameRequired": "Vui lòng nhập tên hiển thị"
+    },
+    "aria": {
+      "modal": "Form viết Kudo",
+      "closeButton": "Đóng form viết Kudo",
+      "boldButton": "In đậm",
+      "italicButton": "In nghiêng",
+      "strikeButton": "Gạch ngang",
+      "listButton": "Danh sách có thứ tự",
+      "linkButton": "Chèn liên kết",
+      "quoteButton": "Trích dẫn",
+      "removeImage": "Xóa ảnh"
+    }
+  },
+  "locales": {
+    "vi": "VN",
+    "en": "EN"
+  }
+}

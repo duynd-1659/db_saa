@@ -1,26 +1,230 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
 
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Components */
+  --header-height: 80px;
+
+  /* Login */
+  --color-page-bg: #00101a;
+  --color-header-bg: rgba(11, 15, 18, 0.8);
+  --color-divider: #2e3940;
+  --color-btn-login: #ffea9e;
+  --color-btn-login-text: #00101a;
+
+  /* Homepage */
+  --color-gold: #ffea9e;
+  --color-border: #998c5f;
+  --color-homepage-header-bg: rgba(16, 20, 23, 0.8);
+  --color-cover-gradient: linear-gradient(
+    12deg,
+    #00101a 23.7%,
+    rgba(0, 18, 29, 0.46) 38.34%,
+    rgba(0, 19, 32, 0) 48.92%
+  );
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-text-muted-80: rgba(255, 255, 255, 0.8);
+  --spacing-page-x: 144px;
+  --spacing-page-y: 96px;
+  --spacing-section-gap: 120px;
+  --spacing-header-y: 12px;
+  --spacing-nav-gap: 64px;
+  --spacing-award-grid-gap: 32px;
+
+  /* Kudos Live board */
+  --color-heart-inactive: rgba(153, 153, 153, 1);
+  --color-heart-active: #ff4d4d;
+  --color-kudos-cover-gradient: linear-gradient(25deg, #00101a 14.74%, rgba(0, 19, 32, 0) 47.8%);
+
+  /* Hashtag filter dropdown */
+  --color-hashtag-dropdown-bg: #00070c;
+  --color-hashtag-dropdown-border: #998c5f;
+  --color-hashtag-item-selected-bg: rgba(255, 234, 158, 0.1);
+  --color-hashtag-glow: #fae287;
+  --text-shadow-hashtag-glow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 0 6px #fae287;
+
+  /* Write Kudo modal */
+  --color-modal-bg: #fff8e1;
+  --color-overlay-mask: rgba(0, 16, 26, 0.8);
+  --color-input-bg: #ffffff;
+  --color-hint-text: #999999;
+  --color-btn-secondary-bg: rgba(255, 234, 158, 0.1);
+
+  /* Floating Action Button (FAB) */
+  --color-fab-action-bg: #ffea9e;
+  --color-fab-cancel-bg: #d4271d;
+  --color-fab-label: #00101a;
+  --color-fab-icon-cancel: #ffffff;
+  --radius-fab-action: 4px;
+  --radius-fab-cancel: 100px;
+  --shadow-fab-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Rules Panel */
+  --color-rules-panel-bg: #00070c;
+  --color-rules-title: #ffea9e;
+  --color-rules-body: #ffffff;
+  --color-rules-btn-close-bg: rgba(255, 234, 158, 0.1);
+  --color-rules-btn-close-border: #998c5f;
+  --color-rules-btn-write-bg: #ffea9e;
+  --color-rules-btn-write-text: #00101a;
+  --color-rules-badge-icon-border: #ffffff;
+  --radius-rules-btn: 4px;
+  --shadow-rules-panel: 0 0 40px rgba(0, 0, 0, 0.5);
+
+  /* Awards Information page */
+  --spacing-content-gap: 80px;
+  --spacing-award-card-gap: 40px;
+  --color-award-card-border: rgba(255, 234, 158, 0.3);
+  --color-section-divider: rgba(255, 234, 158, 0.1);
+  --color-awards-cover-gradient: linear-gradient(0deg, #00101a -4.23%, rgba(0, 19, 32, 0) 52.79%);
 }
 
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-montserrat: var(--font-montserrat);
+  --font-montserrat-alt: var(--font-montserrat-alt);
+
+  /* Login colors */
+  --color-page-bg: var(--color-page-bg);
+  --color-header-bg: var(--color-header-bg);
+  --color-divider: var(--color-divider);
+  --color-btn-login: var(--color-btn-login);
+  --color-btn-login-text: var(--color-btn-login-text);
+
+  /* Homepage colors */
+  --color-gold: var(--color-gold);
+  --color-border: var(--color-border);
+  --color-homepage-header-bg: var(--color-homepage-header-bg);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-muted-80: var(--color-text-muted-80);
+
+  /* Kudos colors */
+  --color-heart-inactive: var(--color-heart-inactive);
+  --color-heart-active: var(--color-heart-active);
+
+  /* Write Kudo modal colors */
+  --color-modal-bg: var(--color-modal-bg);
+  --color-overlay-mask: var(--color-overlay-mask);
+  --color-input-bg: var(--color-input-bg);
+  --color-hint-text: var(--color-hint-text);
+  --color-btn-secondary-bg: var(--color-btn-secondary-bg);
+
+  /* FAB colors */
+  --color-fab-action-bg: var(--color-fab-action-bg);
+  --color-fab-cancel-bg: var(--color-fab-cancel-bg);
+  --color-fab-label: var(--color-fab-label);
+  --color-fab-icon-cancel: var(--color-fab-icon-cancel);
+
+  /* Rules Panel colors */
+  --color-rules-panel-bg: var(--color-rules-panel-bg);
+  --color-rules-title: var(--color-rules-title);
+  --color-rules-body: var(--color-rules-body);
+  --color-rules-btn-close-bg: var(--color-rules-btn-close-bg);
+  --color-rules-btn-close-border: var(--color-rules-btn-close-border);
+  --color-rules-btn-write-bg: var(--color-rules-btn-write-bg);
+  --color-rules-btn-write-text: var(--color-rules-btn-write-text);
+  --color-rules-badge-icon-border: var(--color-rules-badge-icon-border);
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FAB expand entrance animation */
+@keyframes fab-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fab-in {
+  animation: fab-in 200ms ease-out both;
+}
+
+/* Rules Panel slide animations */
+@keyframes rules-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rules-slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.animate-rules-slide-in {
+  animation: rules-slide-in 300ms ease-out both;
+}
+
+.animate-rules-slide-out {
+  animation: rules-slide-out 250ms ease-in both;
+}
+
+/* Spotlight board — sunner name float animation (2D translate + rotate) */
+@keyframes spotlight-oscillate {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(8px, 2px) rotate(2deg);
+  }
+  20% {
+    transform: translate(-5px, 5px) rotate(-1deg);
+  }
+  30% {
+    transform: translate(10px, 3px) rotate(2deg);
+  }
+  40% {
+    transform: translate(-8px, 1px) rotate(-2deg);
+  }
+  50% {
+    transform: translate(10px, 4px) rotate(1deg);
+  }
+  60% {
+    transform: translate(-10px, 2px) rotate(-2deg);
+  }
+  70% {
+    transform: translate(5px, 3px) rotate(2deg);
+  }
+  80% {
+    transform: translate(-10px, 1px) rotate(-1deg);
+  }
+  90% {
+    transform: translate(8px, 2px) rotate(2deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.spotlight-name-oscillate {
+  animation: spotlight-oscillate ease-in-out infinite;
 }
