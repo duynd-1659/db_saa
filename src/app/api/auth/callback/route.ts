@@ -14,9 +14,7 @@ export async function GET(request: NextRequest) {
   }
 
   const cookieStore = await cookies();
-  const cookiesBeforeExchange = cookieStore.getAll().map((c) => c.name);
-
-  const setCookiesLog: string[] = [];
+  const pendingCookies: Array<{ name: string; value: string; options: object }> = [];
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -27,8 +25,7 @@ export async function GET(request: NextRequest) {
           return cookieStore.getAll();
         },
         setAll(cookiesToSet) {
-          setCookiesLog.push(...cookiesToSet.map((c) => c.name));
-          cookiesToSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options));
+          pendingCookies.push(...cookiesToSet);
         },
       },
     },
@@ -40,5 +37,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(new URL('/login?error=auth_failed', request.url));
   }
 
-  return NextResponse.redirect(new URL(safeNext, request.url));
+  const response = NextResponse.redirect(new URL(safeNext, request.url));
+  pendingCookies.forEach(({ name, value, options }) =>
+    response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2]),
+  );
+  return response;
 }
