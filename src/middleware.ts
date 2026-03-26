@@ -20,15 +20,19 @@ function isPublicPath(pathname: string): boolean {
 }
 
 export async function middleware(request: NextRequest) {
-  const { supabase, supabaseResponse } = createClient(request);
   const pathname = request.nextUrl.pathname;
+
+  // ✅ QUAN TRỌNG: skip API trước
+  if (pathname.startsWith('/api/')) {
+    return NextResponse.next();
+  }
+
+  const { supabase, supabaseResponse } = createClient(request);
 
   const {
     data: { user },
-    error: authError,
   } = await supabase.auth.getUser();
 
-  /** Copy refreshed Supabase session cookies to any response we return */
   function withSessionCookies(response: NextResponse): NextResponse {
     supabaseResponse.cookies.getAll().forEach((cookie) => {
       response.cookies.set(cookie.name, cookie.value, { path: '/' });
@@ -36,35 +40,25 @@ export async function middleware(request: NextRequest) {
     return response;
   }
 
-  // Unauthenticated request to a protected route → redirect to /login
   if (!isPublicPath(pathname) && !user) {
-    const loginUrl = new URL('/login', request.nextUrl.clone());
+    const loginUrl = new URL('/login', request.url);
     return withSessionCookies(NextResponse.redirect(loginUrl));
   }
 
-  // Already authenticated user visiting /login → redirect to homepage (preserve locale)
   if (isAuthPath(pathname) && user) {
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = '/';
     const locale =
       routing.locales.find((l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`) ??
       routing.defaultLocale;
-    const homeUrl = new URL(`/${locale}`, redirectUrl);
-    return withSessionCookies(NextResponse.redirect(homeUrl));
+
+    return withSessionCookies(NextResponse.redirect(new URL(`/${locale}`, request.url)));
   }
 
-  // Skip next-intl for API routes — they don't need locale handling
-  if (pathname.startsWith('/api/')) {
-    return withSessionCookies(NextResponse.next());
-  }
-
-  // Let next-intl handle locale routing for all other requests
   return withSessionCookies(handleI18n(request));
 }
 
 export const config = {
   matcher: [
     // Skip Next.js internals, static files, and image assets
-    '/((?!_next/static|_next/image|favicon\\.ico|api|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!_next/static|_next/image|favicon\\.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 };
