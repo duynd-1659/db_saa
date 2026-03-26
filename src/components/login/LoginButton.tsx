@@ -34,6 +34,7 @@ export function LoginButton({ initialError = null }: LoginButtonProps) {
       setStatus('error');
       setErrorMessage(t('errors.auth_failed'));
     } else {
+      console.log('OAuth sign-in initiated successfully.', JSON.stringify(data));
       console.log('OAuth sign-in initiated, response data:', data);
     }
     // On success, the browser will redirect to Google — no state update needed
