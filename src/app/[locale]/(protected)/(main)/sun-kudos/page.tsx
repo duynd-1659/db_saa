@@ -50,7 +50,6 @@ export default async function SunKudosPage(): Promise<React.ReactElement> {
     fetchHashtags(),
     fetchDepartments(),
   ]);
-  console.log('spotlightData', spotlightData);
 
   return (
     <main className="bg-[var(--color-page-bg)] min-h-screen flex flex-col">
@@ -75,7 +74,11 @@ export default async function SunKudosPage(): Promise<React.ReactElement> {
               SPOTLIGHT BOARD
             </h2>
           </div>
-          <SpotlightBoard initialData={spotlightData} initialRecent={recentSpotlight} totalKudos={totalKudosCount} />
+          <SpotlightBoard
+            initialData={spotlightData}
+            initialRecent={recentSpotlight}
+            totalKudos={totalKudosCount}
+          />
         </section>
       )}
 
