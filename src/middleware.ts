@@ -19,8 +19,15 @@ function isPublicPath(pathname: string): boolean {
   return isAuthPath(pathname) || PUBLIC_API_PREFIXES.some((prefix) => pathname.startsWith(prefix));
 }
 
+function getExternalOrigin(request: NextRequest): string {
+  const host = request.headers.get('x-forwarded-host') ?? request.headers.get('host');
+  const proto = request.headers.get('x-forwarded-proto') ?? 'https';
+  return host ? `${proto}://${host}` : request.nextUrl.origin;
+}
+
 export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  const origin = getExternalOrigin(request);
 
   // ✅ QUAN TRỌNG: skip API trước
   if (pathname.startsWith('/api/')) {
@@ -41,7 +48,7 @@ export async function middleware(request: NextRequest) {
   }
 
   if (!isPublicPath(pathname) && !user) {
-    const loginUrl = new URL('/login', request.url);
+    const loginUrl = new URL('/login', origin);
     return withSessionCookies(NextResponse.redirect(loginUrl));
   }
 
@@ -50,7 +57,7 @@ export async function middleware(request: NextRequest) {
       routing.locales.find((l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`) ??
       routing.defaultLocale;
 
-    return withSessionCookies(NextResponse.redirect(new URL(`/${locale}`, request.url)));
+    return withSessionCookies(NextResponse.redirect(new URL(`/${locale}`, origin)));
   }
 
   return withSessionCookies(handleI18n(request));

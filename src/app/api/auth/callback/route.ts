@@ -2,15 +2,22 @@ import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { NextResponse, type NextRequest } from 'next/server';
 
+function getExternalOrigin(request: NextRequest): string {
+  const host = request.headers.get('x-forwarded-host') ?? request.headers.get('host');
+  const proto = request.headers.get('x-forwarded-proto') ?? 'https';
+  return host ? `${proto}://${host}` : request.nextUrl.origin;
+}
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const code = searchParams.get('code');
   const next = searchParams.get('next') ?? '/vi';
 
   const safeNext = next.startsWith('/') && !next.startsWith('//') ? next : '/vi';
+  const origin = getExternalOrigin(request);
 
   if (!code) {
-    return NextResponse.redirect(new URL('/login?error=auth_failed', request.url));
+    return NextResponse.redirect(new URL('/login?error=auth_failed', origin));
   }
 
   const cookieStore = await cookies();
@@ -34,10 +41,10 @@ export async function GET(request: NextRequest) {
   const { error } = await supabase.auth.exchangeCodeForSession(code);
 
   if (error) {
-    return NextResponse.redirect(new URL('/login?error=auth_failed', request.nextUrl.origin));
+    return NextResponse.redirect(new URL('/login?error=auth_failed', origin));
   }
 
-  const response = NextResponse.redirect(new URL(safeNext, request.nextUrl.origin));
+  const response = NextResponse.redirect(new URL(safeNext, origin));
   pendingCookies.forEach(({ name, value, options }) =>
     response.cookies.set(name, value, options as Parameters<typeof response.cookies.set>[2]),
   );
