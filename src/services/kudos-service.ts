@@ -112,6 +112,16 @@ export async function fetchHighlightKudos(
 
   const supabase = await createClient();
 
+  let hashtagId: string | null = null;
+  if (filters.hashtag_key) {
+    hashtagId = await resolveHashtagKeyToId(supabase, filters.hashtag_key);
+    if (!hashtagId) return [];
+  }
+
+  const hashtagJoin = hashtagId
+    ? 'kudo_hashtags!inner(hashtag_id, hashtags(name, key))'
+    : 'kudo_hashtags(hashtag_id, hashtags(name, key))';
+
   let query = supabase
     .from('kudos_with_stats')
     .select(
@@ -127,20 +137,15 @@ export async function fetchHighlightKudos(
       like_count,
       sender:profiles!kudos_sender_id_fkey(id, full_name, avatar_url, hero_badge, department:departments(name)),
       recipient:profiles!kudos_recipient_id_fkey(id, full_name, avatar_url, hero_badge, department:departments(name)),
-      kudo_hashtags(hashtag_id, hashtags(name, key)),
+      ${hashtagJoin},
       kudo_images(url, order_index)
     `,
     )
     .order('like_count', { ascending: false })
     .limit(5);
 
-  if (filters.hashtag_key) {
-    const hashtagId = await resolveHashtagKeyToId(supabase, filters.hashtag_key);
-    if (hashtagId) {
-      query = query.eq('kudo_hashtags.hashtag_id', hashtagId);
-    } else {
-      return [];
-    }
+  if (hashtagId) {
+    query = query.eq('kudo_hashtags.hashtag_id', hashtagId);
   }
   if (filters.department_name) {
     const departmentId = await resolveDepartmentNameToId(supabase, filters.department_name);
