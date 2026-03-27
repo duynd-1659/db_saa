@@ -10,8 +10,9 @@ interface SpotlightRecentFeedProps {
 function formatTime(isoString: string): string {
   try {
     const date = new Date(isoString);
-    const hours = date.getHours();
-    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const vnDate = new Date(date.toLocaleString('en-US', { timeZone: 'Asia/Ho_Chi_Minh' }));
+    const hours = vnDate.getHours();
+    const minutes = vnDate.getMinutes().toString().padStart(2, '0');
     const ampm = hours >= 12 ? 'PM' : 'AM';
     const displayHour = hours % 12 || 12;
     return `${displayHour.toString().padStart(2, '0')}:${minutes}${ampm}`;

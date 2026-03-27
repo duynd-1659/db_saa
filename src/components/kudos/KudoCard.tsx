@@ -220,10 +220,11 @@ function UserInfoColumn({
 
 function formatTimestamp(dateStr: string): string {
   const date = new Date(dateStr);
-  const hours = date.getHours().toString().padStart(2, '0');
-  const minutes = date.getMinutes().toString().padStart(2, '0');
-  const month = (date.getMonth() + 1).toString().padStart(2, '0');
-  const day = date.getDate().toString().padStart(2, '0');
-  const year = date.getFullYear();
+  const vnDate = new Date(date.toLocaleString('en-US', { timeZone: 'Asia/Ho_Chi_Minh' }));
+  const hours = vnDate.getHours().toString().padStart(2, '0');
+  const minutes = vnDate.getMinutes().toString().padStart(2, '0');
+  const month = (vnDate.getMonth() + 1).toString().padStart(2, '0');
+  const day = vnDate.getDate().toString().padStart(2, '0');
+  const year = vnDate.getFullYear();
   return `${hours}:${minutes} - ${month}/${day}/${year}`;
 }
